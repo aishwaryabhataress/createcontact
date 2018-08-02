@@ -83,7 +83,7 @@
 	$result= pg_query($query);
 	if($result = NULL)
 	{
-		echo "<script type='text/javascript'>alert(<?php echo "Record not inserted!" ??>);</script>";
+		echo "<script type='text/javascript'>alert(<?php echo "Record not inserted!" ?>);</script>";
 	}
 	else
 	{
