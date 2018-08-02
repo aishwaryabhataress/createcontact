@@ -81,13 +81,13 @@
 	}
 	$query = "SELECT id,User_Key__c,Email__c FROM salesforce.createuser__c WHERE User_Key__c = '$_POST[userkey]' AND Email__c = '$_POST[email]';";
 	$result= pg_query($query);
-	if(!$result)
+	if($result = NULL)
 	{
-		$query = "INSERT INTO salesforce.contact(FirstName, LastName,Phone, MobilePhone, Email, Password__c,User_Key__c) VALUES('$_POST[firstname]','$_POST[lastname]','$_POST[phonenumber]', '$_POST[mobilenumber]','$_POST[emailid]','$_POST[password]',$_POST[userkey]);";
-		$result= pg_query($query);
+		echo "<script type='text/javascript'>alert(<?php echo "Record not inserted!" ??>);</script>";
 	}
 	else
 	{
-		echo "<script type='text/javascript'>alert(<?php echo "Record not inserted!" ??>);</script>";
+		$query = "INSERT INTO salesforce.contact(FirstName, LastName,Phone, MobilePhone, Email, Password__c,User_Key__c) VALUES('$_POST[firstname]','$_POST[lastname]','$_POST[phonenumber]', '$_POST[mobilenumber]','$_POST[emailid]','$_POST[password]',$_POST[userkey]);";
+		$result= pg_query($query);		
 	}
 ?> 
