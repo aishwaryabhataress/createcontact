@@ -79,7 +79,7 @@
   		echo "An error occurred.\n";
   		exit;	
 	}
-	if (!filter_has_var(INPUT_POST, "userkey"))
+	if (!filter_has_var(INPUT_GET, "userkey"))
 	{	
 		$query = "SELECT id,User_Key__c,Email__c FROM salesforce.createuser__c WHERE User_Key__c = $_POST[userkey] AND Email__c = $_POST[email];";
 		$result= pg_query($query);
