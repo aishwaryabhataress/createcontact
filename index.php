@@ -65,7 +65,7 @@
 </body>
 </html>
 <?php
-	$db = pg_connect("host=ec2-23-21-198-69.compute-1.amazonaws.com port=5432 dbname=dcrqc1sphs49ra user=sszuhptfcszfje password=5f7d705bf8d76df2591c454499d2c2db9c33f33672987de2ceb1112dac372519");
+	$db = pg_connect("host=ec2-54-225-103-167.compute-1.amazonaws.com port=5432 dbname=d4eint6eks6qqk user=fatgesxpvfokki password=bffa152f00a89adba137979148bed3838548d201ff629da150e8ab1922df0521");
 	if (!$db) {
   		echo "An error occurred.\n";
   		exit;	
