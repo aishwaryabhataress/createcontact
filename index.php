@@ -73,24 +73,4 @@
 	$query = "INSERT INTO salesforce.contact(FirstName, LastName,Phone, MobilePhone, Email, Password__c,User_Key__c) VALUES('$_POST[firstname]','$_POST[lastname]','$_POST[phonenumber]', '$_POST[mobilenumber]','$_POST[emailid]','$_POST[password]',$_POST[userkey]);";
 	//$query = "INSERT INTO salesforce.user(FirstName, LastName, Alias, CommunityNickname, Phone, MobilePhone, Street, City, PostalCode, State, Country, Email, TimeZoneSidKey, LocaleSidKey, EmailEncodingKey, ProfileId, LanguageLocaleKey, Username, password__c) VALUES('aishwarya','lastname','abs','abs','9011523102', '9011523102', 'kothrud', 'Pune', '411038', 'Maharashtra', 'India', 'aishwarya.bhat@aress.com', 'GMT', 'en_US', 'UTF-8' , '00e1J0000017aBdQAI', 'en_US', 'aishwarya@ab.com', '1234567890');";
 	$result= pg_query($query);
-	
-	/*$db = pg_connect("host=ec2-23-21-198-69.compute-1.amazonaws.com port=5432 dbname=dcrqc1sphs49ra user=sszuhptfcszfje password=5f7d705bf8d76df2591c454499d2c2db9c33f33672987de2ceb1112dac372519");
-	if (!$db) {
-  		echo "An error occurred.\n";
-  		exit;	
-	}
-	if (!filter_has_var(INPUT_GET, "userkey"))
-	{	
-		$query = "SELECT id,User_Key__c,Email__c FROM salesforce.createuser__c WHERE User_Key__c = $_POST[userkey] AND Email__c = $_POST[email];";
-		$result= pg_query($query);
-		if($result = NULL)
-		{
-			echo "<script type='text/javascript'>alert(<?php echo "Record not inserted!" ?>);</script>";
-		}
-		else
-		{
-			$query = "INSERT INTO salesforce.contact(FirstName, LastName,Phone, MobilePhone, Email, Password__c,User_Key__c) VALUES('$_POST[firstname]','$_POST[lastname]','$_POST[phonenumber]', '$_POST[mobilenumber]','$_POST[emailid]','$_POST[password]',$_POST[userkey]);";
-			$result= pg_query($query);		
-		}
-	}*/
 ?> 
